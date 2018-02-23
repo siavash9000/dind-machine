@@ -22,22 +22,21 @@ echo 'alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi
 Now you are ready to use dind-machine! You can use all docker-machine commands with dind-machine bay replacing docker-machine with `dind-machine`. Take a look in tinto the [reference](https://docs.docker.com/machine/reference/)
 ## Examples
 
-E.g. provision a small digitalocean droplet with the following command. Replace `PERSONAL_ACCESS_TOKEN` with
-your DigitalOcean Personal access token.  
+Replace `PERSONAL_ACCESS_TOKEN` with your DigitalOcean Personal in the following command and provision a small digitalocean droplet:  
+
 ```
 dind-machine create --driver digitalocean \  
 --digitalocean-access-token=PERSONAL_ACCESS_TOKEN \  
 --engine-install-url https://raw.githubusercontent.com/rancher/install-docker/master/17.12.0.sh \  
 --digitalocean-size 1gb digitalocean-machine  
-```
+```  
 Open an ssh shell on your remote server like this:  
 
 `dind-machine ssh digitalocean-machine`  
 
 Destroy it with:  
  
-`dind-machine rm digitalocean-machine`
+`dind-machine rm digitalocean-machine`  
 
-## BACKUP
-
+## BACKUP  
 Backup the dind-machine setup by backing up the folder defined by DIND_MACHINE_DATA. You can also share your machine setup by sharing this folder.
