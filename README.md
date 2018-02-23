@@ -18,7 +18,10 @@ mkdir -p ~/.dind-machine && export DIND_MACHINE_DATA=~/.dind-machine
 alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi/dind-machine docker-machine"
 ```
 
-Now you are ready to use dind-machine! You can use all docker-machine commands with dind-machine bay replacing docker-machine with dind-machine.
+Now you are ready to use dind-machine! You can use all docker-machine commands with dind-machine bay replacing docker-machine with `dind-machine`. To enable dind-machine at startup perform 
+```
+echo "dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi/dind-machine docker-machine"" >> ~/.bashrc
+```
 
 ## Examples
 
