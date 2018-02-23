@@ -20,7 +20,7 @@ image for docker-machine.
 `mkdir -p ~/.dind-machine && export DIND_MACHINE_DATA=~/.dind-machine`  
 
 3. define an alias for dind-machine with:  
-`alias dind-machine="docker run -v $DIND_MACHINE_DATA=/root/.docker/ nukapi/dind-machine docker-machine"`
+`alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi/dind-machine docker-machine"`
 
 Now you are ready to use dind-machine! You can use all docker-machine commands with dind-machine.  
 
@@ -30,7 +30,7 @@ your DigitalOcean Personal access token.
 `dind-machine create --driver digitalocean \
 --digitalocean-access-token=$PERSONAL_ACCESS_TOKEN \
 --engine-install-url https://raw.githubusercontent.com/rancher/install-docker/master/17.12.0.sh \
---digitalocean-size 1gb digitalocean-machine`  
+--digitalocean-size 1gb digitalocean-machine` 
 
 Open an ssh shell on your remote server like this:  
 
