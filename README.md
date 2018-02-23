@@ -9,7 +9,7 @@ image for docker-machine.
 ```
 docker pull nukapi/dind-machine
 ```  
-2. Define the path DIND_MACHINE_DATA to the sensible docker-machine data:  
+2. Define the path DIND_MACHINE_DATA to the sensitive docker-machine data:  
 ```
 mkdir -p ~/.dind-machine && export DIND_MACHINE_DATA=~/.dind-machine
 ```  
