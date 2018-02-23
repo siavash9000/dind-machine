@@ -1,4 +1,4 @@
-#liberate docker-machine setups with dind-machine.
+# Liberate docker-machine setups with dind-machine.
 
 docker-machine is super easy and super powerful. 
 Provisioning and setting up a docker swarm cluster 
