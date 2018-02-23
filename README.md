@@ -4,8 +4,8 @@ docker-machine is super easy and super powerful.
 Provisioning and setting up a docker swarm cluster 
 with docker-machine is fast and simple.
 
-there is only one major drawback: sharing the docker-machine setup with 
-colleauges or backing up the setup is a hassle due to missing configuration 
+there is only one major drawback: sharing the server setup 
+is a hassle due to missing configuration 
 options and diverging versions.  
 
 dind-machine solve this problems by simply offering a docker in docker based 
