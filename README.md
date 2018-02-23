@@ -22,7 +22,7 @@ echo 'alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi
 Now you are ready to use dind-machine! You can use all docker-machine commands with dind-machine by replacing docker-machine with `dind-machine`. Take a look in into the [reference](https://docs.docker.com/machine/reference/)
 ## Examples
 
-Replace `PERSONAL_ACCESS_TOKEN` with your DigitalOcean Personal in the following command and provision a small digitalocean droplet:  
+Replace `PERSONAL_ACCESS_TOKEN` with your digitalocean personal access token in the following command and provision a small digitalocean droplet:  
 
 ```
 dind-machine create --driver digitalocean \  
