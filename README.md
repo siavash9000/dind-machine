@@ -38,5 +38,5 @@ Destroy it with:
  
 `dind-machine rm digitalocean-machine`  
 
-## BACKUP  
+## Take care of your data!
 Backup the dind-machine setup by backing up the folder defined by DIND_MACHINE_DATA. You can also share your machine setup by sharing this folder.
