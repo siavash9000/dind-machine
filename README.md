@@ -15,14 +15,11 @@ mkdir -p ~/.dind-machine && export DIND_MACHINE_DATA=~/.dind-machine
 ```  
 3. define an alias for dind-machine with:  
 ```
-alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi/dind-machine docker-machine"
-```
-
-Now you are ready to use dind-machine! You can use all docker-machine commands with dind-machine bay replacing docker-machine with `dind-machine`. To enable dind-machine at startup perform 
-```
+alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi/dind-machine docker-machine" && \
 echo 'alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi/dind-machine docker-machine"' >> ~/.bashrc
-```
+```  
 
+Now you are ready to use dind-machine! You can use all docker-machine commands with dind-machine bay replacing docker-machine with `dind-machine`. Take a look in tinto the [reference](https://docs.docker.com/machine/reference/)
 ## Examples
 
 E.g. provision a small digitalocean droplet with the following command. Replace `PERSONAL_ACCESS_TOKEN` with
