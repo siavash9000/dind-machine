@@ -17,7 +17,7 @@ image for docker-machine.
 `docker pull nukapi/dind-machine`  
 
 2. define where dind-machine shall save the docker-machine data by defining the environment variable `DIND_MACHINE_DATA`:  
-`mkdir ~/.dind-machine && export DIND_MACHINE_DATA=~/.dind-machine`  
+`mkdir -p ~/.dind-machine && export DIND_MACHINE_DATA=~/.dind-machine`  
 
 3. define an alias for dind-machine with:  
 `alias dind-machine="docker run -v $DIND_MACHINE_DATA=/root/.docker/ nukapi/dind-machine docker-machine"`
