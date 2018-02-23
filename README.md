@@ -25,11 +25,11 @@ image for docker-machine.
 
 Now you are ready to use dind-machine! You can use all docker-machine commands with dind-machine.  
 
-E.g. provision a small digitalocean droplet with the following command. Replace **PERSONAL_ACCESS_TOKEN** with
+E.g. provision a small digitalocean droplet with the following command. Replace `PERSONAL_ACCESS_TOKEN` with
 your DigitalOcean Personal access token.
 
 `dind-machine create --driver digitalocean \
---digitalocean-access-token=$PERSONAL_ACCESS_TOKEN \
+--digitalocean-access-token=PERSONAL_ACCESS_TOKEN \
 --engine-install-url https://raw.githubusercontent.com/rancher/install-docker/master/17.12.0.sh \
 --digitalocean-size 1gb digitalocean-machine` 
 
