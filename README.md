@@ -11,8 +11,9 @@ replacement for docker-machine. In both cases you need first to pull the docker 
 docker pull nukapi/dind-machine
 ```  
 
-Now you can execute the image and use docker-machine inside it. **Thhe option `-v ~/.dind-machine:/root/.docker/`
-creates a volume mapping to the path with the docker-machine data. Do not remove it to not lose your docker-machine data! If you start the container without volume mapping, you will loose all certifcates docker-machine creates when you exit the container.**
+Now you can execute the image and use docker-machine inside it. **The option `-v ~/.dind-machine:/root/.docker/`
+creates a volume mapping to the path with the docker-machine data. Do not remove it to not lose your docker-machine data! 
+If you start the container without volume mapping, you will loose all certifcates docker-machine creates when you exit the container.**
 
 
 ```
