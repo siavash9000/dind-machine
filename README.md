@@ -5,38 +5,36 @@ image for docker-machine.
 
 ## Getting Started
 
-1. pull the docker image of dind-machine:  
+There are two ways you could dind-machine. As an envirnoment inside a docker container or as commandline
+replacement for docker-machine. In both you need firt to pull the docker image of dind-machine:
 ```
 docker pull nukapi/dind-machine
 ```  
-2. Define the path DIND_MACHINE_DATA to the sensitive docker-machine data:  
+
+Now you can execute the image and use docker-machine inside it. **Create a volume mapping to the 
+path with the docker-machine data to not lose your data!**
+
+
+```
+mkdir -p ~/.dind-machine
+docker run -it -v ~/.dind-machine:/root/.docker/ nukapi/dind-machine sh -l
+docker-machine ls
+```
+
+To use dind-machine as docker-machine replacement you need to set an environment variable
+DIND_MACHINE_DATA with the path where the docker-machine data should be stored. 
+
 ```
 mkdir -p ~/.dind-machine && export DIND_MACHINE_DATA=~/.dind-machine
 ```  
-3. define an alias for dind-machine with:  
+Then define an alias for dind-machine with:  
 ```
 alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi/dind-machine docker-machine" && \
 echo 'alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi/dind-machine docker-machine"' >> ~/.bashrc
 ```  
 
-Now you are ready to use dind-machine! You can use all docker-machine commands with dind-machine by replacing docker-machine with `dind-machine`. Take a look in into the [reference](https://docs.docker.com/machine/reference/)
-## Examples
-
-Replace `PERSONAL_ACCESS_TOKEN` with your DigitalOcean Personal in the following command and provision a small digitalocean droplet:  
-
-```
-dind-machine create --driver digitalocean \  
---digitalocean-access-token=PERSONAL_ACCESS_TOKEN \  
---engine-install-url https://raw.githubusercontent.com/rancher/install-docker/master/17.12.0.sh \  
---digitalocean-size 1gb digitalocean-machine  
-```  
-Open an ssh shell on your remote server like this:  
-
-`dind-machine ssh digitalocean-machine`  
-
-Destroy it with:  
- 
-`dind-machine rm digitalocean-machine`  
+Now you can use docker-machine commands with dind-machine by replacing docker-machine with `dind-machine`. 
+For example `dind-machine ls`. Take a look in into the [reference](https://docs.docker.com/machine/reference/)
 
 ## Take care of your data!
 Backup the dind-machine setup by backing up the folder defined by DIND_MACHINE_DATA. You can also share your machine setup by sharing this folder.
