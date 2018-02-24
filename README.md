@@ -1,7 +1,10 @@
 # Liberate docker-machine setups with dind-machine
 
-[docker-machine](https://github.com/docker/machine) is an easy to use and powerful tool. Provisioning and setting up cloud server with docker-machine is fast and simple. But it has one major drawback: sharing the server setup is a hassle due to missing configuration options and diverging versions. dind-machine solve this problems by offering a docker in docker based 
-image for docker-machine.
+[docker-machine](https://github.com/docker/machine) is an easy to use and powerful tool. Provisioning and setting up 
+cloud server with docker-machine is fast and simple. But it has one major drawback: sharing the server setup is a 
+hassle due to missing configuration options and diverging versions. dind-machine is a docker in docker image 
+for docker-machine which makes docker-machine portable and shareable. Provision machines with dind-machine and 
+share the server configuration and server access easily with others!
 
 ## Getting Started
 
