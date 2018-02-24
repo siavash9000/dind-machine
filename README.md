@@ -32,10 +32,6 @@ dind-machine create --driver digitalocean \
 --engine-install-url https://raw.githubusercontent.com/rancher/install-docker/master/17.12.0.sh \  
 --digitalocean-size 1gb digitalocean-machine  
 ```  
-Open an ssh shell on your remote server like this:  
-
-`dind-machine ssh digitalocean-machine`  
-
 Destroy it with:  
  
 `dind-machine rm digitalocean-machine`  
