@@ -36,7 +36,7 @@ echo  'export DIND_MACHINE_DATA=~/.dind-machine' >> ~/.bashrc
 Then define an alias for dind-machine with:  
 ```
 alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi/dind-machine docker-machine"
-echo 'alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi/dind-machine docker-machine"' >> ~/.bashrc
+echo 'alias dind-machine="docker run -i -t -v $DIND_MACHINE_DATA:/root/.docker/ nukapi/dind-machine docker-machine"' >> ~/.bashrc
 ```  
 
 Now you can use docker-machine commands with dind-machine by replacing docker-machine with `dind-machine`. 
