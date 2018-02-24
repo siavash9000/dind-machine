@@ -5,8 +5,8 @@ image for docker-machine.
 
 ## Getting Started
 
-There are two ways you could dind-machine. As an envirnoment inside a docker container or as commandline
-replacement for docker-machine. In both you need firt to pull the docker image of dind-machine:
+There are two ways you can use dind-machine. As an envirnoment inside a docker container or as shell
+replacement for docker-machine. In both cases you need first to pull the docker image of dind-machine:
 ```
 docker pull nukapi/dind-machine
 ```  
@@ -36,7 +36,11 @@ echo 'alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi
 ```  
 
 Now you can use docker-machine commands with dind-machine by replacing docker-machine with `dind-machine`. 
-For example `dind-machine ls`. Take a look in into the [reference](https://docs.docker.com/machine/reference/)
+For example 
+```
+dind-machine ls`
+```
+Take a look in into the [reference](https://docs.docker.com/machine/reference/)
 
 ## Take care of your data!
 Backup the dind-machine setup by backing up the folder defined by DIND_MACHINE_DATA. You can also share your machine setup by sharing this folder.
