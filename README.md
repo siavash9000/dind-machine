@@ -38,7 +38,7 @@ echo 'alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi
 Now you can use docker-machine commands with dind-machine by replacing docker-machine with `dind-machine`. 
 For example 
 ```
-dind-machine ls`
+dind-machine ls
 ```
 Take a look in into the [reference](https://docs.docker.com/machine/reference/)
 
