@@ -46,5 +46,16 @@ dind-machine ls
 ```
 Take a look in into the [reference](https://docs.docker.com/machine/reference/)
 
+## Connecting to the remote docker daemon
+You can conveniently connect to your servers docker daemon from your local machine and initialize a 
+[docker swarm](https://docs.docker.com/engine/swarm/).
+:
+```
+eval $(dind-machine env myserver --shell zsh) && export DOCKER_CERT_PATH="$DIND_MACHINE_DATA/machine/machines/myserver"
+
+sudo -E docker swarm init
+sudo -E docker node ls
+```
 ## Take care of your data!
-Backup the dind-machine setup by backing up the folder defined by DIND_MACHINE_DATA. You can also share your machine setup by sharing this folder.
+Backup the dind-machine setup by backing up the folder defined by DIND_MACHINE_DATA. 
+You can also share your machine setup by sharing this folder.
