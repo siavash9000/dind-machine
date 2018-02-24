@@ -25,11 +25,13 @@ To use dind-machine as docker-machine replacement you need to set an environment
 DIND_MACHINE_DATA with the path where the docker-machine data should be stored. 
 
 ```
-mkdir -p ~/.dind-machine && export DIND_MACHINE_DATA=~/.dind-machine
+mkdir -p ~/.dind-machine
+export DIND_MACHINE_DATA=~/.dind-machine
+echo  'export DIND_MACHINE_DATA=~/.dind-machine' >> ~/.bashrc
 ```  
 Then define an alias for dind-machine with:  
 ```
-alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi/dind-machine docker-machine" && \
+alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi/dind-machine docker-machine"
 echo 'alias dind-machine="docker run -v $DIND_MACHINE_DATA:/root/.docker/ nukapi/dind-machine docker-machine"' >> ~/.bashrc
 ```  
 
